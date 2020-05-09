@@ -7,5 +7,45 @@
 </head>
 <body>
     <p>Olá seja-bem vindo!</p>
+
+    <label for="campo">
+        Escreva seu nome:
+        <input type="text" id="campo">
+        <input type="text" class="campo">
+        <input type="text" name="nome">
+    </label>
+
+        <h1></h1>
+
+
+<script>
+
+    let campo = document.getElementById('campo')
+     let campoQS = document.querySelector('#campo')
+
+    let campo_ = document.getElementsByClassName('campo')
+    let campo_QS = document.querySelector('.campo')
+
+    let h1 = document.getElementsByTagName('h1')[0]
+    let h1QS = document.querySelector('h1')
+
+    let exemplo = document.getElementsByName('nome')
+
+
+    campo.addEventListener('mouseover', () =>{
+        h1.innerText = 'Ola'
+    })
+    campo.addEventListener('mousemove', () =>{
+        h1.innerText += '!'
+    })
+
+    campo.addEventListener('mouseleave', () =>{
+        h1.innerText = ''
+    })
+
+    document.addEventListener('mousemove', (e) =>{
+        h1.innerText = `${e.pageX} x ${e.pageY}`
+    })
+</script>
 </body>
 </html>
